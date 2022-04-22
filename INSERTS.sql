@@ -34,7 +34,11 @@ GO
 
 -- EMPLOYEES
 INSERT INTO EMPLOYEES (SSN,FirstName,MiddleName,LastName,StreetAddress,City,StateCode,ZipCode,Title,StartDate,EndDate)
-VALUES (123456789, 'John', '', 'Doe', '123 Main St', 'Anytown', 'CA', 12345, 'Manager', '1/1/2000', '2001-12-17');
+VALUES 
+    (123456789, 'John', '', 'Doe', '123 Main St', 'Anytown', 'CA', 12345, 'Manager', '1/1/2000', '2001-12-17'),
+    (987654321, 'Jeff', '', 'Johnson', '321 Main St.','Shytown','IL',54321,'Employee', 1/1/2000);
+
+
 
 -- WAREHOUSE_EMP
 SELECT * FROM EMPLOYEES
@@ -67,15 +71,6 @@ VALUES (5, 30000.00, 1000.00);
 -- CUSTOMER
 INSERT INTO CUSTOMER (CustomerID,FirstName,LastName, BillingStreetAddress,BillingStateCode, BillingZipCode, InsuranceCompany, InsuranceID)
 VALUES (1, 'John', 'Doe', '123 Main St','UT', 12345, 'AIG', 123456789);
-
--- FIX
--- FIX
--- INDIVIDUAL
--- SELECT * FROM CUSTOMER
--- INSERT INTO INDIVIDUAL (CustomerID,)
--- VALUES 
--- FIX
--- FIX
 
 
 -- BUSINESS
