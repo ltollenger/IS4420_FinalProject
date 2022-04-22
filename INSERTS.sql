@@ -1,3 +1,5 @@
+---
+
 -------------------------------- All Table Names --------------------------------
 -- EMPLOYEES
 -- WAREHOUSE_EMP
@@ -25,8 +27,10 @@
 -- WAREHOUSE
 -- INTERNAL_TRUCK
 -- INTRASTATE_LINE
--------------------------------- All Table Names --------------------------------
 
+-------------------------------- All Table Names --------------------------------
+USE FinalProject_Group8;
+GO
 
 -- EMPLOYEES
 INSERT INTO EMPLOYEES (SSN,FirstName,MiddleName,LastName,StreetAddress,City,StateCode,ZipCode,Title,StartDate,EndDate)
@@ -35,32 +39,34 @@ VALUES (123456789, 'John', '', 'Doe', '123 Main St', 'Anytown', 'CA', 12345, 'Ma
 -- WAREHOUSE_EMP
 SELECT * FROM EMPLOYEES
 INSERT INTO WAREHOUSE_EMP (EmployeeID,HourlyPay,ForkliftCert)
-VALUES (1, 10, 'Y');
+VALUES 
+	(1, 10, 'Y'), 
+	(2, 10, 'Y');
 
 -- TRUCKER
 SELECT * FROM EMPLOYEES
 INSERT INTO TRUCKER (EmployeeID,HourlyPay,MilesDriven,PayPerMile,CDL)
-VALUES (2, 15, 100, 10, 'Y');
+VALUES (2, 15.2, 100, 1.1, 'Y');
 
 -- SERVICE_MEMBER
 SELECT * FROM EMPLOYEES
 INSERT INTO SERVICE_MEMBER (EmployeeID,HourlyPay,HomeCert)
-VALUES (3, 20, 'Y');
+VALUES (3, 20.2, 'Y');
 
 -- ADMINISTRATION
 SELECT * FROM EMPLOYEES
 INSERT INTO ADMINISTRATION (EmployeeID,Salary)
-VALUES (4, 25000);
+VALUES (4, 25000.00);
 
 -- SALES_REP
 SELECT * FROM EMPLOYEES
 INSERT INTO SALES_REP (EmployeeID,BaseSalary,Commissions)
-VALUES (5, 30000, 1000);
+VALUES (5, 30000.00, 1000.00);
 
 
 -- CUSTOMER
-INSERT INTO CUSTOMER (CustomerID,FirstName,LastName, BillingStreetAddress, BillingZipCode, InsuranceCompany, InsuranceID)
-VALUES (1, 'John', 'Doe', '123 Main St', 12345, 'AIG', 123456789);
+INSERT INTO CUSTOMER (CustomerID,FirstName,LastName, BillingStreetAddress,BillingStateCode, BillingZipCode, InsuranceCompany, InsuranceID)
+VALUES (1, 'John', 'Doe', '123 Main St','UT', 12345, 'AIG', 123456789);
 
 -- FIX
 -- FIX
@@ -100,19 +106,31 @@ VALUES (1, '1/1/2000', 100);
 INSERT INTO CUSTOMER_ORDER (OrderID,CustomerID,EmployeeID,OrderDate,OrderTime,DeliveryAddress,DeliveryZipCode,DeliveryState)
 VALUES (1, 1, 1, '1/1/2000', '1:00 PM', '123 Main St', 12345, 'CA');
 
+
+
+
+------------------------------------
+-- STUCK HERE
+
 -- ORDER_PRODUCT
-INSERT INTO ORDER_PRODUCT (OrderProduct,OrderID,ProductID,Price,Quantity)
-VALUES (1, 1, 1, 100, 1);
+INSERT INTO ORDER_PRODUCT (OrderID,ProductID,Price,Quantity)
+VALUES (1, 1, 100, 1);
+
+
+-- SHIPMENT_LOCATION
+INSERT INTO SHIPMENT_LOCATION (ShipmentLocationID)
+VALUES (1);
 
 
 -- PRODUCT_LOCATION
 SELECT * FROM ORDER_PRODUCT
-INSERT INTO PRODUCT_LOCATION (ProductLocationID,ProductID)
+INSERT INTO PRODUCT_LOCATION (OrderProduct,ShipmentLocationID)
 VALUES (1, 1);
 
--- SHIPMENT_LOCATION
-INSERT INTO SHIPMENT_LOCATION (ShipmentLocationID,OrderID,ProductID)
-VALUES (1, 1, 1);
+
+-- STUCK HERE
+------------------------------------
+
 
 -- CORPORATE_TRUCKING
 SELECT * FROM SHIPMENT_LOCATION
