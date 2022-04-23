@@ -35,15 +35,8 @@ GO
 -- EMPLOYEES
 INSERT INTO EMPLOYEES (SSN,FirstName,MiddleName,LastName,StreetAddress,City,StateCode,ZipCode,Title,StartDate,EndDate)
 VALUES 
-<<<<<<< HEAD
     (123456789, 'John', '', 'Doe', '123 Main St', 'Anytown', 'CA', 12345, 'Manager', '1/1/2000', '1/1/2005'),
     (987654321, 'Jeff', '', 'Johnson', '321 Main St.','Shytown','IL',54321,'Employee', '1/1/2000', '1/1/2020');
-=======
-    (123456789, 'John', '', 'Doe', '123 Main St', 'Anytown', 'CA', 12345, 'Manager', '1/1/2000', '2001-12-17'),
-    (987654321, 'Jeff', '', 'Johnson', '321 Main St.','Shytown','IL',54321,'Employee', 1/1/2000);
->>>>>>> b2301196d341b97a6fd720722a3d3e9331f719b7
-
-
 
 -- WAREHOUSE_EMP
 SELECT * FROM EMPLOYEES
