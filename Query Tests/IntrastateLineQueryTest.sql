@@ -1,0 +1,6 @@
+USE FinalProject_Group8;
+GO
+
+SELECT
+   IL.*
+FROM INTRASTATE_LINE AS IL
