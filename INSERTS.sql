@@ -1,4 +1,3 @@
----
 
 -------------------------------- All Table Names --------------------------------
 -- EMPLOYEES
@@ -111,8 +110,8 @@ VALUES (1, 1, 100, 1);
 
 
 -- SHIPMENT_LOCATION
-INSERT INTO SHIPMENT_LOCATION (ShipmentLocationID)
-VALUES (1);
+INSERT INTO SHIPMENT_LOCATION (ShipmentLocationID,LocationName,StreetAddress,StateCode,ZipCode)
+VALUES (1, 'Warehouse #2', '123 Main St', 'CA', 12345);
 
 
 -- PRODUCT_LOCATION
